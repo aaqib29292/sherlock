@@ -2,4 +2,16 @@
 title: Welcome to Middleman
 ---
 
-<h1>Characters</h1>
+<div id="characters" class="container-fluid">
+  <div class="row">
+    <% data.characters.each do |character| %>
+      <div class="character col-lg-3  col-md-4 col-sm-6">
+        <div class="well">
+          <img class= "img-responsive" src="../images/characters/<%= character.thumbnail %>" alt="<%= character.name %>">
+          <h4><%= character.name %></h4>
+          <p><%= character.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
